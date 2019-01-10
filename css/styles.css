@@ -1,0 +1,39 @@
+.container {
+  margin:0 auto;
+  padding: 5em 0 10em 2em;
+  border-bottom: 20px dotted red;
+  border-left: 50px solid black;
+  /*Este es un comentaio*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /*Las columnas se dividen por las secciones programadas en el archivo html*/
+  grid-template-rows: 1fr 2fr 1fr 50px; /*Las fracciones calculan el espacio y lo dividen equitativamente*/
+  grid-gap: 5px;
+  grid-template-areas:
+  ". . . a"
+  "b b c c"
+  ". d d ."
+  "e e e e" /*Retícula de 4x4, las letras posicionan cada sección*/
+}
+#parrafo_inicial {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+  header {
+    grid-area: a;
+  }
+  .uno {
+    background-color: blue;
+    grid-area: b;
+  }
+  .dos {
+    background-color: yellow;
+    grid-area: c;
+  }
+article {
+  background-color: red;
+  grid-area: d;
+}
+footer {
+  background-color: black;
+  grid-area: e;
+}
