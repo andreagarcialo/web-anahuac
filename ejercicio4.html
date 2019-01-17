@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Ejercicio de diseño">
+    <meta name="author" content="Andrea">
+    <title>Ejercicio 4</title>
+    <style media="screen">
+      svg {
+        width: 800px
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <svg id="my-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 428.63 431.29" onclick="shapes.reset().play();"><defs><style>.cls-1{fill:#fff;}.cls-1,.cls-2{stroke:#243e86;stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:none;}</style></defs><title>vector01</title>
+        <circle class="cls-1" cx="216.89" cy="161.5" r="80.25"/>
+        <circle class="cls-2" cx="136.64" cy="161.5" r="80.25"/><circle class="cls-2" cx="297.14" cy="161.5" r="80.25"/><circle class="cls-2" cx="216.89" cy="81.25" r="80.25"/>
+        <circle class="cls-2" cx="216.89" cy="241.75" r="80.25"/><polyline class="cls-2" points="427.92 185.18 216.89 396.22 0.71 180.03"/><polyline class="cls-2" points="297.14 349.62 216.89 429.87 136.64 349.62"/></svg>
+    </div>
+    <script type="text/javascript" src="js/vivus.min.js">
+    </script>
+    <script>
+      shapes = new Vivus('my-svg', {type: 'sync', duration: 150});
+      //Los tipos de animaciones son "delayed", "sync", "scenario sync", "oneByone".
+    </script>
+  </body>
+</html>
