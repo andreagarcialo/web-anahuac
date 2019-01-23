@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Seguimos con Vivus</title>
+  </head>
+  <body>
+    <div class="container">
+      <object id="my-svg" type="image/svg+xml" data="images/hexagonos.svg" width="600px">
+      </object>
+    </div>
+    <script type="text/javascript" src="js/vivus.min.js">
+    </script>
+    <script>
+      shapes = new Vivus('my-svg', {type: 'sync', duration: 150});
+      //Los tipos de animaciones son "delayed", "sync", "scenario sync", "oneByone".
+    </script>
+  </body>
+</html>
