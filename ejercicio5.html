@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="deescription" content="Ejercicio sobre shapes.">
+    <meta name="author" content="Andrea Garcia">
+    <title>Ejercicio 5</title>
+    <style media="screen">
+      .container{
+        margin: 0 auto;
+        width: 80%;
+      }
+      section {
+
+      }
+      #img01 {
+        width: 400px;
+        float: left;
+        shape-outside: circle(40%);
+      }
+      #img02{
+        width: 400px;
+        float: right;
+        shape-outside: polygon(108px 80px, 97px 181px, 95.36% 80.77%, 381px 80px);
+        /* shape-outside nos sirve para delimitar el texto a una forma dentro de la imagen, podemos modificar esta forma manualmente desde el servidor firefox developer edition, copiando el código de la forma resultante (comando: shape-outside: polygon(0 0, 10px 0, 20px 0); */
+      }
+      #img03 {
+        width: 400px;
+        float: left;
+        clip-path: ellipse(177px 104px at 47.50% 46.00%);
+        /* clip-path enmascarilla la imagen dependiendo de la forma dadda /en este caso eliopse). podemos modificar esta forma manualmente desde el servidor firefox developer edition, copiando el código de la forma resultante (conmando: clip-path: polygon, circle, ellipse(datos) */
+        shape-outside: ellipse(177px 104px at 47.50% 46.00%);
+      }
+      #img04 {
+        width: 600px;
+        float: right;
+        shape-outside: url(images/png01.png);
+        /* utiliza el borde del png como límite de texto sobre la imagen */
+      }
+      #img05 {
+        width: 500px;
+        float: left;
+        clip-path: url(#my-svg)
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <h1>Shape outside, circulo</h1>
+        <img id="img01" src="images/paisaje05.jpg" alt="Paisaje">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section>
+        <h1>Shape outside, poligono</h1>
+        <img id="img02" src="images/paisaje04.jpg" alt="Paisaje 2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section>
+        <h1>Clip path, elipse</h1>
+        <img id="img03" src="images/paisaje01.jpg" alt="Paisaje 3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section>
+        <h1>Clip path, png</h1>
+        <img id="img04" src="images/paisaje06.jpg" alt="Bollito">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section>
+        <h1>Clip path, svg</h1>
+        <img id="img05" src="images/paisaje02.jpg" alt="Paisaje4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <svg>
+          <defs>
+            <clipPath id="my-svg">
+              <path class="st0" d="M99,182.2c0,0-40.3-144.3,74.3-126.9s139.9,107.5,190.9,18.6S475.2,135.2,416,185s-245.5-20.6-170.4,68.4
+              	s293.1,107.1,195,128.9c-98.1,21.7-26.6,126.5-125.8,34S142,185,153.5,313.8s-56.9,98.8-58.9,86.6c-2-12.3-104.3-233.2-32-146.6
+              	S99,182.2,99,182.2z"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </section>
+    </div>
+  </body>
+</html>
