@@ -1,9 +1,17 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
+html, body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .container {
     display: grid;
-
+    background-color: #000000;
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
     grid-auto-rows: minmax(250px, auto);
@@ -95,5 +103,17 @@ img {
   */
 
   @media (min-width: 320px) and (max-width: 480px) {
-
+    .img{
+      grid-area: 2/1/3/5;
+    }
+    .text{
+      grid-area: 2/2/3/4;
+      text-align: left;
+    }
+    h1{
+      font-size: 1.7rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
   }
