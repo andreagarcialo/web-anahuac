@@ -1,3 +1,6 @@
+*, *:before, *after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
@@ -18,27 +21,64 @@
   ". . . . ."
 }
 
+img {
+  text-shadow: 3px 3px 12px #213255;
+  padding: .7em;
+}
+
 .topnav {
   grid-area: topnav;
   text-align: right;
   display: flex;
   justify-content: space-between;
   color: white;
-
 }
-/*
-.navbar-brand {
-  grid-area: brand;
+
+nav >ul {
   display: flex;
+  list-style: none;
+  margin: 1.5em;
+  margin-right: 3em;
+}
+
+li{
+  padding: 1.5em;
+}
+
+li a {
+  text-decoration: none;
+  color:white;
+}
+
+ul a:hover{
+  color: #6ACFFF;
+}
+
+h4:hover{
+  color: #6ACFFF;
+}
+
+img:hover{
+  color: #6ACFFF;
+}
+
+.left {
+  padding: .5em;
+  margin: 1em;
+  margin-left: 2.5em;
+  grid-area: topnav;
+  display: flex;
+  font-size: 1.2rem;
   justify-content: flex-start;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  align-items: center;
 }
 
-.nav-wrapper {
-  grid-area: wrap;
-  display: flex;
-  justify-content: flex-end;
+h4 {
+  margin-left: 1em;
 }
-*/
+
 .icons {
   display: flex;
   justify-content: center;
@@ -50,6 +90,8 @@ h1{
   grid-area: h1;
   font-size: 7rem;
   justify-content: center;
+  text-shadow: 3px 3px 12px #213255;
+  opacity: 100%;
 }
 
 h3 {
@@ -57,17 +99,28 @@ h3 {
   grid-area: h3;
   font-size: 2rem;
   justify-content: center;
+  text-shadow: 3px 3px 12px #213255;
 }
 
 html {
-  background-image: url("../images/background01.jpg");
+  /*background-image: url("../images/fondo.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 
 }
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
   body {
     background: radial-gradient(circle farthest-corner   at right bottom,#009875 0,#198CEB 28%,#013C6E       52%,#4E703F 79%,#EBB87C 100%);
-    opacity: .7;
+    opacity: .3;
     height: 100vh;
     width: 100%;
     font-family: 'Montserrat';
