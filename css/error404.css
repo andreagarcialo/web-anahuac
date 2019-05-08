@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  color: white;
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+  font-size: 13em;
+  color: #FF775F;
+  text-shadow: 2px 2px 10px #024764;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  color: white;
+}
+
+main{
+  background-color: #54A1E8;
+  padding: 4em;
+}
+
+p{
+  display: flex;
+  justify-content: center;
+  margin: 7em;
+  font-size: 1em;
+}
+
+a{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  color:black;
+}
+
+
+a:hover{
+  color: #6ACFFF;
+}
