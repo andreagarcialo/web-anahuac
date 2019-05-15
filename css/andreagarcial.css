@@ -32,6 +32,7 @@ img {
   display: flex;
   justify-content: space-between;
   color: white;
+  font-size: 1rem;
 }
 
 nav >ul {
@@ -133,3 +134,129 @@ video {
     position: relative;
     overflow: hidden;
   }
+
+  /* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+  h1{
+    font-size: 5rem;
+    margin-top:-2.5em;
+  }
+  h3{
+    font-size: 1.5rem;
+    margin-top:-10em;
+  }
+  .icons{
+    margin-top: -18em;
+  }
+  h4{
+    margin-top: -1em;
+  }
+  img{
+    margin-top: -1em;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+  h1{
+    margin-top:1em;
+    font-size: 5.5rem;
+  }
+  .topnav{
+    font-size: 1.5rem;
+  }
+  h4{
+    font-size: 1.5rem;
+  }
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+  h1{
+    margin-top:-2.5em;
+  }
+
+  h3{
+    margin-top:-7.5em;
+  }
+  .icons{
+    margin-top:-18em;
+  }
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+  h1{
+    margin-top: 2em;
+    font-size: 5rem;
+  }
+  h3{
+    font-size: 2.5rem;
+  }
+  h4{
+    font-size: 1.8rem;
+    margin-top: -.1em;
+  }
+  .topnav{
+    font-size: 1.5rem;
+  }
+  img{
+    margin-top: 0em;
+  }
+}
+
+/* iPhone 6, 7, 8 Landscape----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+  h1{
+    margin-top: -3.8em;
+    font-size: 3.7rem;
+  }
+  h3{
+    margin-top: -12.5em;
+    font-size: 1.5rem;
+  }
+  .icons{
+    margin-top: -24em;
+  }
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+  h1{
+    margin-top: 10em;
+    font-size: 3.7rem;
+  }
+  h3{
+    margin-top: -12.5em;
+    font-size: 1.5rem;
+  }
+  .icons{
+    margin-top: -24em;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+  h1{
+    margin-top: 2.5em;
+    font-size: 5.5rem;
+  }
+  h3{
+    font-size: 3.5rem;
+  }
+  h4{
+    font-size: 1.8rem;
+    margin-top: -.1em;
+  }
+  .topnav{
+    font-size: 1.5rem;
+  }
+  img{
+    margin-top: 0em;
+  }
+}
